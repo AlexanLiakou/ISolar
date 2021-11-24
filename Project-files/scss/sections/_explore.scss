@@ -1,0 +1,90 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+#explore{
+
+    @include content-font;
+
+    #first-element{
+        margin-top: 150px;
+    }
+
+    .custom-row{
+
+        background: rgba($color:$primary, $alpha: 0.5);
+        border-radius: 10px;
+        padding: 0.8rem;
+
+        .second-col{
+            margin-top: 3rem;
+        }
+
+        h2{
+            text-align: center;
+        }
+    }
+
+    h1,h2{
+        color: #fff;
+    }
+
+    p{
+        color: #fff;
+        text-align: justify;
+    }
+
+    img{
+        width: 100%;
+        max-height: 450px;
+    }
+
+    .planet-div{
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+    #planet-tag{
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        background: rgba($color:$black, $alpha: 0.5);
+        color: #fff;
+        font-size: 0.7rem;
+        font-style: italic;
+        padding: 3px;
+    }
+
+    span{
+        color: $primary;
+        font-weight: bold;
+    }
+
+    ul>li{
+        text-align: center;
+    }
+
+    .p-name{
+        font-size:1.5rem ;
+    }
+
+    .custom-btn{
+        display: flex;
+        align-items: center;
+        transition: 0.4s;
+        border-radius: 10px;
+    }
+
+    .custom-btn:hover{
+        background: rgba($color: #fff, $alpha: 1) !important;
+        color: rgba($color: $primary, $alpha: 1.0) !important;
+    }
+
+    i{
+        padding-left: 0.7rem;
+    }
+
+    ::placeholder{
+        font-style: italic;
+    }
+}

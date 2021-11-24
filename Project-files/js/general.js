@@ -1,0 +1,1 @@
+export const copyright= document.getElementById("year").appendChild(document.createTextNode(`${new Date().getFullYear()}`));

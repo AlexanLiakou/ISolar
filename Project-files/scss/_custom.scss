@@ -1,0 +1,16 @@
+// Color variables
+
+$midnight-blue:  #0A0A5C;
+$majorelle-blue: #5B5BEC;
+$black: #0000;
+
+// Bootstrap color overrides
+
+$primary: $midnight-blue;
+$secondary: $majorelle-blue;
+$carousel-control-color: #ffff;
+$carousel-control-opacity: 0.7;
+$carousel-indicator-active-bg: #ffff;
+$btn-close-color: $primary;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
