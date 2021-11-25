@@ -1,23 +1,20 @@
 import {copyright} from "./general.js";
-import {Planet, PlanetImg} from "./planets.js";
+import {Planet} from "./planets.js";
 import {PlanetUi} from "./planets-ui.js";
 
 const planet= new Planet("earth");
-const planetImg= new PlanetImg("earth");
 const uip= new PlanetUi();
 copyright;
 
 document.addEventListener("DOMContentLoaded",getPlanet);
-document.addEventListener("DOMContentLoaded",getPlanetImg);
+document.addEventListener("DOMContentLoaded",initialImage);
+
 
 document.getElementById("planet-submit").addEventListener("click", (e) =>{
     let cPlanet= document.getElementById("planet").value;
-
     planet.changePlanet(cPlanet);
-    planetImg.changePlanetImg(cPlanet);
-
     getPlanet();
-    getPlanetImg();
+    changePlanetImage(cPlanet);
     clearModal();
 });
 
@@ -27,8 +24,33 @@ function getPlanet(){
     .catch(err =>{console.log(err)})
 }
 
-function getPlanetImg(){
-    planetImg.fillImg()
+function initialImage(){
+    const plImage= document.getElementById("p-image");
+    plImage.setAttribute("src", "./assets/images/earth.jpg");
+}
+
+
+function changePlanetImage(option){
+    const planet= option;
+    const plImage= document.getElementById("p-image");
+
+    if(planet=="earth"){
+        plImage.setAttribute("src", "./assets/images/earth.jpg");
+    }else if(planet=="mars"){
+        plImage.setAttribute("src", "./assets/images/mars.jpg");
+    }else if(planet=="venus"){
+        plImage.setAttribute("src", "./assets/images/venus.jpg");
+    }else if(planet=="mercury"){
+        plImage.setAttribute("src", "./assets/images/mercury.jpg");
+    }else if(planet=="jupiter"){
+        plImage.setAttribute("src", "./assets/images/jupiter.png");
+    }else if(planet=="neptune"){
+        plImage.setAttribute("src", "./assets/images/neptune.jpg");
+    }else if(planet=="saturn"){
+        plImage.setAttribute("src", "./assets/images/saturn.jpg");
+    }else if(planet=="uranus"){
+        plImage.setAttribute("src", "./assets/images/uranus.jpg");
+    }
 }
 
 function clearModal(){
