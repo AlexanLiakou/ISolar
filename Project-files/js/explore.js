@@ -77,3 +77,4 @@ function validateModal(){
     }
 }
 
+document.querySelector(".btn-close").addEventListener("click", clearModal);
