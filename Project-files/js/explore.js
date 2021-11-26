@@ -65,9 +65,10 @@ const submitBtn= document.getElementById("planet-submit");
 submitBtn.disabled=true;
 
 function validateModal(){
-    const planetInput= document.getElementById("planet");
+    let planetInput= document.getElementById("planet");
     const submitBtn= document.getElementById("planet-submit");
     const re=/^(earth|mars|venus|mercury|jupiter|uranus|neptune|saturn)$/;
+    planetInput.value= planetInput.value.toLowerCase();
     if(!re.test(planetInput.value)|| planetInput.value==""){
         planetInput.classList.add("is-invalid");
         submitBtn.setAttribute("disabled", "disabled");
