@@ -1,0 +1,21 @@
+@use "../custom" as *;
+
+// Gradient mixin
+
+@mixin gradient-nav {
+    background: linear-gradient(to right,rgba($primary,1), rgba($secondary,1));
+}
+
+@mixin gradient-content {
+    background: linear-gradient(to right,rgba($primary,0.6), rgba($secondary,0.6));
+}
+
+@mixin showcase{
+    background: url(../images/pod-bg.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin content-font {
+    font-family: 'Poppins', sans-serif;
+}
